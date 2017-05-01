@@ -1,8 +1,10 @@
 #main-logo-container {
-    padding: 2vh;
+    padding: 1vh;
     width: auto;
-    height: 8vh;
+    min-height: 7vh;
+    max-height: 8vh;
 }
+
 .preloader-background {
 	display: flex;
 	align-items: center;

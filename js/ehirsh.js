@@ -1,6 +1,7 @@
 
-$( document ).ready(function(){ 
+$( document ).ready(function(){
     $(".button-collapse").sideNav();
+    $('.parallax').parallax();
 })
 
 document.addEventListener("DOMContentLoaded", function(){
