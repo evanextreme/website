@@ -5,9 +5,9 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link href="bower_components/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="css/ehirsh.css" />
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}" media="screen,projection" />
+    <link href="{{ url_for('static', filename='bower_components/mdi/css/materialdesignicons.min.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/ehirsh.css') }}" />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,7 +35,7 @@
         <nav>
             <div class="nav-wrapper black">
                 <a href="#" class="brand-logo center">
-                     <img id="main-logo-container" src="media/img/logo.png" alt="Evan Hirsh">
+                     <img id="main-logo-container" src="{{ url_for('static', filename='media/img/logo.png') }}" alt="Evan Hirsh">
                   </a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
@@ -72,21 +72,15 @@
             </div>
         </div>
     </div>
-
-    <div class="parallax-container">
-        <div class="parallax"><img src="media/img/stone.jpg"></div>
-    </div>
-    <div class="container">
-    <p class="flow-text">Hey everyone, welcome to my new site! This website is a work in progress, and i'm still working on turning it into something great. Please follow me on twitter for updates!</p>
-    </div>
+    {% block content %}{% endblock %}
 </body>
 
 
 <footer>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/ehirsh.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/ehirsh.js') }}"></script>
 </footer>
 
 </html>
