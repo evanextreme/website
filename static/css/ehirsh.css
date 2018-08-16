@@ -1,11 +1,4 @@
-#main-logo-container {
-    width: auto;
-    min-height: 7vh;
-    max-height: 8vh;
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle
-}
+
 
 .preloader-background {
 	display: flex;
@@ -22,4 +15,13 @@
 }
 .spinner-black-only {
   border-color: #000000;
+}
+
+.logo-helper{
+    vertical-align: middle;
+    width: 40vw;
+    min-height: 7vh;
+    max-height: 8vh;
+    height: 60px;
+
 }
