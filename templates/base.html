@@ -13,6 +13,8 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ehirsh.css') }}">
+
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -20,16 +22,18 @@
 
     <!-- Dropdown Structure -->
     <ul id="projects" class="dropdown-content">
-      <li><a class="black-text" href="https://www.github.com/evanextreme/website">Website</a></li>
-      <li><a class="black-text" href="https://www.github.com/evanextreme/ritchie">Ritchie</a></li>
-      <li class="divider"></li>
-      <li><a class="black-text" href="https://www.esportsrit.com/">RIT Esports</a></li>
+        <li><a class="subheader disabled">Programming</a></li>
+        <li><a class="black-text" href="https://www.github.com/evanextreme/website">Website</a></li>
+        <li><a class="black-text" href="https://www.github.com/evanextreme/ritchie">Ritchie</a></li>
+        <li><a class="black-text" href="https://www.github.com/foodtrax">Foodtrax</a></li>
+        <li><a class="subheader disabled">Esports</a></li>
+        <li><a class="black-text" href="https://www.esportsrit.com/">RIT Esports</a></li>
     </ul>
 
     <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper black">
-        <img class="brand-logo center" src="{{ url_for('static', filename='media/img/logo-small.png') }}" alt="Evan Hirsh"></img>
+        <img class="brand-logo center middle" style="height: 60px;" src="{{ url_for('static', filename='media/img/logo.png') }}" alt="Evan Hirsh"></img>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li><a class="hover waves-effect waves-light tooltipped" data-position="bottom" data-delay="50" data-tooltip="Twitter" href="https://www.twitter.com/evanextreme"><i class="mdi mdi-twitter"></i></a></li>
@@ -39,14 +43,21 @@
       </div>
     </nav>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
-  </ul>
 
 </div>
+<ul class="sidenav" id="mobile-demo">
+    <li><a class="waves-effect waves-light" href="https://www.twitter.com/evanextreme"><i class="mdi mdi-twitter right"></i>Twitter</a></li>
+    <li><a class="waves-effect waves-light"  href="https://www.github.com/evanextreme"><i class="mdi mdi-github-face right"></i>GitHub</a></li>
+    <li><a class="dropdown-trigger hover waves-effect waves-light" href="#" data-target="mobile-projects">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
+</ul>
+<ul id="mobile-projects" class="dropdown-content">
+  <li><a class="subheader disabled">Programming</a></li>
+  <li><a class="black-text" href="https://www.github.com/evanextreme/website">Website</a></li>
+  <li><a class="black-text" href="https://www.github.com/evanextreme/ritchie">Ritchie</a></li>
+  <li><a class="black-text" href="https://www.github.com/foodtrax">Foodtrax</a></li>
+  <li><a class="subheader disabled">Esports</a></li>
+  <li><a class="black-text" href="https://www.esportsrit.com/">RIT Esports</a></li>
+</ul>
 
 
 </head>
