@@ -5,6 +5,10 @@ app = Flask(__name__)
 def home_view():
     return render_template('index.html')
 
+@app.route("/contact")
+def contact_view():
+    return render_template('contact.html')
+
 @app.route("/pay")
 def pay_view():
     return render_template('pay.html')
