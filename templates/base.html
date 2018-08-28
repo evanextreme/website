@@ -7,6 +7,7 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zye0fyz.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
@@ -23,18 +24,18 @@
 
     <!-- Dropdown Structure -->
     <ul id="projects" class="dropdown-content">
-        <li><a class="subheader disabled">Programming</a></li>
+        <li><a class="black-text subheader disabled">Programming</a></li>
         <li><a class="black-text" href="https://www.github.com/evanextreme/website">Website</a></li>
         <li><a class="black-text" href="https://www.github.com/evanextreme/ritchie">Ritchie</a></li>
         <li><a class="black-text" href="https://www.github.com/foodtrax">Foodtrax</a></li>
-        <li><a class="subheader disabled">Esports</a></li>
+        <li><a class="black-text subheader disabled">Esports</a></li>
         <li><a class="black-text" href="https://www.esportsrit.com/">RIT Esports</a></li>
     </ul>
 
     <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper black">
-        <a href="/"><img class="brand-logo center middle" style="height: 60px;" src="{{ url_for('static', filename='media/img/logo.png') }}" href="/" alt="Evan Hirsh"></img></a>
+        <a href="/" class="brand-logo center logo-text">EVAN HIRSH</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li><a class="hover waves-effect waves-light tooltipped" data-position="bottom" data-delay="50" data-tooltip="Email" href="mailto:evan@ehirsh.com"><i class="material-icons">email</i></a></li>
@@ -54,11 +55,11 @@
     <li><a class="dropdown-trigger hover waves-effect waves-light" href="#" data-target="mobile-projects">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
 </ul>
 <ul id="mobile-projects" class="dropdown-content">
-  <li><a class="subheader disabled">Programming</a></li>
+  <li><a class="black-text subheader disabled">Programming</a></li>
   <li><a class="black-text" href="https://www.github.com/evanextreme/website">Website</a></li>
   <li><a class="black-text" href="https://www.github.com/evanextreme/ritchie">Ritchie</a></li>
   <li><a class="black-text" href="https://www.github.com/foodtrax">Foodtrax</a></li>
-  <li><a class="subheader disabled">Esports</a></li>
+  <li><a class="black-text subheader disabled">Esports</a></li>
   <li><a class="black-text" href="https://www.esportsrit.com/">RIT Esports</a></li>
 </ul>
 
@@ -66,22 +67,6 @@
 </head>
 
 <body>
-
-    <!-- <div class="preloader-background">
-        <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-black-only">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div>
-                <div class="gap-patch">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     {% block content %}{% endblock %}
 </body>
 
