@@ -23,5 +23,10 @@
     min-height: 7vh;
     max-height: 8vh;
     height: 60px;
+}
 
+.logo-text {
+    font-family: futura-pt, sans-serif;
+    font-style: bold;
+    font-weight: 700;
 }
