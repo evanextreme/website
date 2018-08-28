@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/ehirsh.css') }}">
 
+    <title>{% block title %}{% endblock %}</title>
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -36,11 +37,10 @@
         <a href="/"><img class="brand-logo center middle" style="height: 60px;" src="{{ url_for('static', filename='media/img/logo.png') }}" href="/" alt="Evan Hirsh"></img></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a class="hover dropdown-trigger hover waves-effect waves-light" href="#" data-target="projects">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a class="hover waves-effect waves-light" href="/contact">Contact</a></li>
+            <li><a class="hover waves-effect waves-light tooltipped" data-position="bottom" data-delay="50" data-tooltip="Email" href="mailto:evan@ehirsh.com"><i class="material-icons">email</i></a></li>
             <li><a class="hover waves-effect waves-light tooltipped" data-position="bottom" data-delay="50" data-tooltip="Twitter" href="https://www.twitter.com/evanextreme"><i class="mdi mdi-twitter"></i></a></li>
             <li><a class="hover waves-effect waves-light tooltipped" data-position="bottom" data-delay="50" data-tooltip="GitHub" href="https://www.github.com/evanextreme"><i class="mdi mdi-github-face"></i></a></li>
-
+            <li><a class="hover dropdown-trigger hover waves-effect waves-light" href="#" data-target="projects">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
       </div>
     </nav>
@@ -48,6 +48,7 @@
 
 </div>
 <ul class="sidenav" id="mobile-demo">
+    <li><a class="waves-effect waves-light" href="mailto:evan@ehirsh.com"><i class="material-icons right">email</i>Email</a></li>
     <li><a class="waves-effect waves-light" href="https://www.twitter.com/evanextreme"><i class="mdi mdi-twitter right"></i>Twitter</a></li>
     <li><a class="waves-effect waves-light"  href="https://www.github.com/evanextreme"><i class="mdi mdi-github-face right"></i>GitHub</a></li>
     <li><a class="dropdown-trigger hover waves-effect waves-light" href="#" data-target="mobile-projects">Projects<i class="material-icons right">arrow_drop_down</i></a></li>
