@@ -1,1 +1,8 @@
 flask
+peewee
+pygments
+markdown
+micawber
+BeautifulSoup
+flask_letsencrypt
+pyopenssl
