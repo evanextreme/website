@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-
 @app.route("/")
 def home_view():
     return render_template('index.html')
@@ -18,4 +17,4 @@ def pay_view():
 
 
 if __name__ == '__main__':
-    app.run(ssl_context='adhoc')
+    app.run(host='0.0.0.0', port=80)
