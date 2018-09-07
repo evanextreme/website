@@ -1,3 +1,4 @@
 flask
 flask_letsencrypt
 pyopenssl
+flask-blogging
