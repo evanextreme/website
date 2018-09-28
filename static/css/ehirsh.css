@@ -27,7 +27,7 @@
     font-family: futura-pt, sans-serif;
     font-style: bold;
     font-weight: 700;
-    font-kerning: 2px;
+    letter-spacing: .26ex;
 }
 
 .navbar-material .nav-wrapper .brand-logo img {
