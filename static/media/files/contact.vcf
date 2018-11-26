@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.14//EN
+N:Hirsh;Evan;;;
+FN:Evan Hirsh
+EMAIL;type=INTERNET;type=WORK;type=pref:evan@ehirsh.com
+TEL;type=IPHONE;type=CELL;type=VOICE;type=pref:845-238-8058
+item1.URL;type=pref:http://www.ehirsh.com
+item1.X-ABLabel:_$!<HomePage>!$_
+IMPP;X-SERVICE-TYPE=Skype;type=HOME;type=pref:skype:evanextreme
+IMPP;X-SERVICE-TYPE=Facebook;type=HOME:xmpp:evanextreme
+UID:da6a6496-82e9-4f00-8e04-11cd299542c0
+X-ABUID:95CC1B3D-CA81-491C-9889-7E7B5467C740:ABPerson
+END:VCARD
