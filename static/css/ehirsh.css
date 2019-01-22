@@ -28,6 +28,9 @@
     font-style: bold;
     font-weight: 700;
     letter-spacing: .16em;
+    left: 50%;
+    -webkit-transform: translateX(-30%);
+    transform: translateX(-30%);
 }
 
 .navbar-material .nav-wrapper .brand-logo img {
