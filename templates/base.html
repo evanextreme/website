@@ -30,7 +30,7 @@
         <li><a class="black-text" href="https://www.esportsrit.com/">RIT Esports</a></li>
     </ul>
     <ul id="contact" class="dropdown-content">
-        <li><a class="black-text" href="https://www.messenger.me/evanextreme/">Messenger</a></li>
+        <li><a class="black-text" href="https://www.m.me/evanextreme/">Messenger</a></li>
         <li><a class="black-text" href="mailto:evan@ehirsh.com">Email</a></li>
         <li><a class="black-text" href="sms:evan@ehirsh.com">iMessage</a></li>
     </ul>
@@ -70,7 +70,7 @@
   <li><a class="black-text" href="https://www.esportsrit.com/">RIT Esports</a></li>
 </ul>
 <ul id="mobile-contact" class="dropdown-content">
-    <li><a class="black-text" href="https://www.messenger.me/evanextreme/">Messenger</a></li>
+    <li><a class="black-text" href="https://www.m.me/evanextreme/">Messenger</a></li>
     <li><a class="black-text" href="mailto:evan@ehirsh.com">Email</a></li>
     <li><a class="black-text" href="sms:evan@ehirsh.com">iMessage</a></li>
 </ul>
@@ -85,6 +85,21 @@
 
 <footer>
     <script type="text/javascript" src="{{ url_for('static', filename='js/ehirsh.js') }}"></script>
+    <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+    <script>
+        (function (f, a, t, h, o, m) {
+            a[h] = a[h] || function () {
+                (a[h].q = a[h].q || []).push(arguments)
+            };
+            o = f.createElement('script'),
+                m = f.getElementsByTagName('script')[0];
+            o.async = 1; o.src = t; o.id = 'fathom-script';
+            m.parentNode.insertBefore(o, m)
+        })(document, window, '//ehirsh.com/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'XHUBE');
+        fathom('trackPageview');
+    </script>
+    <!-- / Fathom -->
 </footer>
 
 </html>
