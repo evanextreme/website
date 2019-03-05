@@ -7,22 +7,22 @@ def home_view():
 
 
 @app.route('/test')
-def home_view():
+def test():
     return render_template('test_site/index.html')
 
 
 @app.route('/page-1')
-def home_view():
+def test1():
     return render_template('test_site/page-1.html')
 
 
 @app.route('/page-2')
-def home_view():
+def test2():
     return render_template('test_site/page-2.html')
 
 
 @app.route('/page-2-a')
-def home_view():
+def test3():
     return render_template('test_site/page-2-a.html')
 
 @app.route('/blog')
