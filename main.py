@@ -6,6 +6,25 @@ def home_view():
     return render_template('index.html')
 
 
+@app.route('/test')
+def home_view():
+    return render_template('test_site/index.html')
+
+
+@app.route('/page-1')
+def home_view():
+    return render_template('test_site/page-1.html')
+
+
+@app.route('/page-2')
+def home_view():
+    return render_template('test_site/page-2.html')
+
+
+@app.route('/page-2-a')
+def home_view():
+    return render_template('test_site/page-2-a.html')
+
 @app.route('/blog')
 def blog_view():
     return render_template('blog.html')
