@@ -34,11 +34,6 @@ def blog_view():
 def pay_view():
     return render_template('pay.html')
 
-
-@app.route('/crypto')
-def pay_view():
-    return render_template('crypto.html')
-
 @app.route('/card')
 def download_contact():
     return send_file('static/media/files/contact.vcf')
