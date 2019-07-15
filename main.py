@@ -5,26 +5,6 @@ app = Flask(__name__)
 def home_view():
     return render_template('index.html')
 
-
-@app.route('/test')
-def test():
-    return render_template('test_site/index.html')
-
-
-@app.route('/page-1')
-def test1():
-    return render_template('test_site/page-1.html')
-
-
-@app.route('/page-2')
-def test2():
-    return render_template('test_site/page-2.html')
-
-
-@app.route('/page-2-a')
-def test3():
-    return render_template('test_site/page-2-a.html')
-
 @app.route('/blog')
 def blog_view():
     return render_template('blog.html')
@@ -33,6 +13,12 @@ def blog_view():
 @app.route('/pay')
 def pay_view():
     return render_template('pay.html')
+
+
+@app.route('/contact')
+def contact_view():
+    return render_template('contact.html')
+
 
 @app.route('/card')
 def download_contact():
