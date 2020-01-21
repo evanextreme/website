@@ -10,6 +10,8 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { blue, lightBlue, red } from "@material-ui/core/colors";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
+import About from "./pages/about";
+
 const App: React.FC = () => {
   const prefersDark = useMediaQuery("(prefers-color-scheme: dark)");
   const theme = React.useMemo(
@@ -38,7 +40,9 @@ const App: React.FC = () => {
           <div className="App-header">
             <Navbar></Navbar>
           </div>
-          <Container maxWidth="sm"></Container>
+          <Container maxWidth="sm">
+            <About></About>
+          </Container>
         </div>
       </Router>
     </ThemeProvider>

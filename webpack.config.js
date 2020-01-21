@@ -6,6 +6,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(?:le|c)ss$/,
+        // include: path.join(__dirname, "src/components"),
+        // test: /\.css$/i,
+        use: ["style-loader", "css-loader", "less-loader"]
+      },
+      {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/
@@ -13,7 +19,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js", ".css", ".less"]
   },
   output: {
     filename: "bundle.js",
