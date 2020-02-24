@@ -6,9 +6,9 @@ COPY . /app
 
 ENV PATH /app/node_modules/.bin:$PATH
 
-RUN yarn
+RUN npm install -D
 
-RUN yarn build
+RUN npm run build
 
 FROM nginx:alpine
 
