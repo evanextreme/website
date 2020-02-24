@@ -1,15 +1,23 @@
-FROM python:3.6
-MAINTAINER Evan Hirsh "evan@ehirsh.com"
-
-# We copy just the requirements.txt first to leverage Docker cache
-COPY ./requirements.txt /app/requirements.txt
+FROM node:alpine as build
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
-
 COPY . /app
 
-ENTRYPOINT [ "python" ]
+ENV PATH /app/node_modules/.bin:$PATH
 
-CMD [ "main.py" ]
+RUN yarn
+
+RUN yarn build
+
+FROM nginx:alpine
+
+COPY --from=build /app/build /usr/share/nginx/html
+
+RUN rm /etc/nginx/conf.d/default.conf
+
+COPY nginx.conf /etc/nginx/conf.d
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
