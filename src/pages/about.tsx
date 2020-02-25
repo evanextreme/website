@@ -1,16 +1,30 @@
 import React from "react";
+import Image from "react-bootstrap/Image";
+import { Parallax } from "react-scroll-parallax";
 import "./about.css";
 
 const About: React.FC = () => {
   return (
-    <div className="about-description-body">
-      <p>
-        My name is Evan Hirsh. I'm a software engineer with experience in full
-        stack and distributed systems. I'm passionate about building the things
-        I want to see, whether that's a discord bot for tracking game stats /
-        analyzing replays, one of the leading student run esports clubs in the
-        nation, or this website.
-      </p>
+    <div>
+      {/* <Parallax
+        blur={{ min: -15, max: 15 }}
+        bgImage={}
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        Hi. I'm a software engineer with years of experience in backend, full
+        stack, and distributed systems. I've worked for high valuation startups
+        and trillion dollar companies, and will be starting this fall at
+        Microsoft.
+        <div style={{ height: "1200px", width: "1200px" }} />
+      </Parallax> */}
+      <Parallax
+        className="about-description-body"
+        y={[-20, 20]}
+        tagOuter="figure"
+      >
+        <Image src={process.env.PUBLIC_URL + "img/messy_hair.jpeg"} />
+      </Parallax>
     </div>
   );
 };

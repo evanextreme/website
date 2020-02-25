@@ -8,6 +8,9 @@ import Container from "@material-ui/core/Container";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { blue, lightBlue, red } from "@material-ui/core/colors";
+
+import { ParallaxProvider } from "react-scroll-parallax";
+
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import About from "./pages/about";
@@ -34,18 +37,20 @@ const App: React.FC = () => {
   );
 
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <div className="App">
-          <div className="App-header">
-            <Navbar></Navbar>
+    <ParallaxProvider>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <div className="App">
+            <div className="App-header">
+              <Navbar></Navbar>
+            </div>
+            <Container maxWidth="sm">
+              <About></About>
+            </Container>
           </div>
-          <Container maxWidth="sm">
-            <About></About>
-          </Container>
-        </div>
-      </Router>
-    </ThemeProvider>
+        </Router>
+      </ThemeProvider>
+    </ParallaxProvider>
   );
 };
 
