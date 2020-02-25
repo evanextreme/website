@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  AppBar,
-  Button,
-  Typography,
-  Toolbar,
-  IconButton
-} from "@material-ui/core";
+import { AppBar, Grid, Toolbar, IconButton } from "@material-ui/core";
 
 // import { Link } from "react-router-dom";
 
@@ -25,7 +19,7 @@ const Navbar: React.FC = () => {
       <AppBar>
         <Toolbar>
           <p className="navbar-logo-text">EHIRSH</p>
-          <div className="navbar-menu-buttons">
+          <Grid container spacing={1} direction="row" justify="flex-end">
             <IconButton href="mailto:evan@ehirsh.com" aria-label="Email">
               <EmailIcon />
             </IconButton>
@@ -41,7 +35,7 @@ const Navbar: React.FC = () => {
             >
               <GitHubIcon />
             </IconButton>
-          </div>
+          </Grid>
         </Toolbar>
       </AppBar>
     </div>
