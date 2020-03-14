@@ -16,7 +16,7 @@ import "./navbar.css";
 const Navbar: React.FC = () => {
   return (
     <div className="navbar">
-      <AppBar>
+      <AppBar position="sticky">
         <Toolbar>
           <p className="navbar-logo-text">EHIRSH</p>
           <Grid container spacing={1} direction="row" justify="flex-end">
