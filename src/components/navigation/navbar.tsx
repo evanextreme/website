@@ -5,9 +5,9 @@ import { AppBar, Grid, Toolbar, IconButton } from "@material-ui/core";
 
 import {
   Email as EmailIcon,
-  GithubFace as GitHubIcon,
+  GitHub as GitHubIcon,
   Twitter as TwitterIcon
-} from "mdi-material-ui";
+} from "@material-ui/icons";
 
 import "./navbar.css";
 
@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     <div className="navbar">
       <AppBar position="sticky">
         <Toolbar>
-          <p className="navbar-logo-text">EHIRSH</p>
+          <h1 className="navbar-logo-text">EHIRSH</h1>
           <Grid container spacing={1} direction="row" justify="flex-end">
             <IconButton href="mailto:evan@ehirsh.com" aria-label="Email">
               <EmailIcon />
