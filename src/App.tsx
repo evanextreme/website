@@ -1,15 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Navbar from "./components/navigation/navbar";
 import Container from "@material-ui/core/Container";
 
 import { ThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
-import { blue, lightBlue, red } from "@material-ui/core/colors";
+import { palette } from "@material-ui/system";
 
-import { ParallaxProvider } from "react-scroll-parallax";
+import { red, blue, lightBlue } from "@material-ui/core/colors";
 
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
@@ -21,6 +20,7 @@ const App: React.FC = () => {
     () =>
       createMuiTheme({
         palette: {
+          type: prefersDark ? "dark" : "light",
           primary: prefersDark ? lightBlue : blue,
           secondary: lightBlue,
           error: red,
@@ -37,20 +37,21 @@ const App: React.FC = () => {
   );
 
   return (
-    <ParallaxProvider>
-      <ThemeProvider theme={theme}>
-        <Router>
-          <div className="App">
-            <div className="App-header">
-              <Navbar></Navbar>
-            </div>
-            <Container maxWidth="sm">
-              <About></About>
-            </Container>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <div
+          className="App"
+          style={{ backgroundColor: "palette.background.default" }}
+        >
+          <div className="App-header">
+            <Navbar></Navbar>
           </div>
-        </Router>
-      </ThemeProvider>
-    </ParallaxProvider>
+          <Container maxWidth="sm">
+            <About></About>
+          </Container>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 };
 
