@@ -18,7 +18,7 @@ const About: React.FC = () => {
           console.log("Image clicked. Will do something with this later lmao")
         }
         src={evanImage}
-        aspectRatio={9 / 11}
+        aspectRatio={8.5 / 11}
       />
     </div>
   );
