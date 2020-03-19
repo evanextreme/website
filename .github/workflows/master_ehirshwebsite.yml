@@ -29,6 +29,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: "ehirshwebsite"
-          slot-name: "production"
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_489abaeea3784d88b6f48df7acb77b4c }}
           package: .
