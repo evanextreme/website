@@ -26,7 +26,7 @@ jobs:
           yarn run build
 
       - name: "Deploy to Azure Web App"
-        uses: azure/webapps-deploy@v1
+        uses: azure/webapps-deploy@v2
         with:
           app-name: "ehirshwebsite"
           slot-name: "production"
