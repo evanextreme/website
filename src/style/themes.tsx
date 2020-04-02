@@ -1,4 +1,4 @@
-import React from "react";
+import React = require('react')
 
 import { createMuiTheme } from "@material-ui/core/styles";
 import { blue, lightBlue, red } from "@material-ui/core/colors";

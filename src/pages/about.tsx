@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "material-ui-image";
+import React = require('react');;
+// import Image from "material-ui-image";
 
 import evanImage from "../assets/img/guggenheim.jpeg";
 
@@ -13,13 +13,13 @@ const About: React.FC = () => {
           this fall.
         </h3>
       </div>
-      <Image
+      {/* <Image
         onClick={() =>
           console.log("Image clicked. Will do something with this later lmao")
         }
         src={evanImage}
         aspectRatio={8.5 / 11}
-      />
+      /> */}
     </div>
   );
 };
