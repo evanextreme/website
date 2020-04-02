@@ -1,4 +1,4 @@
-import React from "react";
+import React = require('react')
 import { BrowserRouter as Router } from "react-router-dom";
 
 import Navbar from "./components/navigation/navbar";
