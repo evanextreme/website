@@ -1,4 +1,4 @@
-import React = require('react')
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import Navbar from "./components/navigation/navbar";
@@ -6,7 +6,6 @@ import Container from "@material-ui/core/Container";
 
 import { ThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
-import { palette } from "@material-ui/system";
 
 import { red, blue, lightBlue } from "@material-ui/core/colors";
 
