@@ -32,15 +32,12 @@ module.exports = (env, options) => {
     },
 
     module: {
-      rules: [
-        {
+      rules: [{
           test: /\.ts(x?)$/,
           exclude: /node_modules/,
-          use: [
-            {
-              loader: "ts-loader"
-            }
-          ]
+          use: [{
+            loader: "ts-loader"
+          }]
         },
         {
           test: /favicon\.ico$/,
@@ -60,32 +57,14 @@ module.exports = (env, options) => {
           use: ["style-loader", "css-loader"]
         },
         {
-          test: /\.(gif|png|jpe?g|svg)$/i,
-          use: [
-            "file-loader",
-            {
-              loader: "image-webpack-loader",
-              options: {
-                mozjpeg: {
-                  progressive: true,
-                  quality: 65
-                },
-                optipng: {
-                  enabled: true
-                },
-                pngquant: {
-                  quality: "65-90",
-                  speed: 4
-                },
-                gifsicle: {
-                  interlaced: false
-                },
-                webp: {
-                  quality: 75
-                }
-              }
+          test: /\.(png|jp(e*)g|svg)$/,
+          use: [{
+            loader: 'url-loader',
+            options: {
+              limit: 8000, // Convert images < 8kb to base64 strings
+              name: 'img/[hash]-[name].[ext]'
             }
-          ]
+          }]
         }
       ]
     },
