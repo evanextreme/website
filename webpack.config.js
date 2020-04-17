@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const settings = {
   distPath: path.join(__dirname, "dist"),
-  srcPath: path.join(__dirname, "src")
+  srcPath: path.join(__dirname, "src"),
 };
 
 function srcPathExtend(subpath) {
@@ -11,7 +11,6 @@ function srcPathExtend(subpath) {
 }
 
 module.exports = (env, options) => {
-  const isDevMode = options.mode === "development";
   return {
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
@@ -27,52 +26,57 @@ module.exports = (env, options) => {
         ".png",
         ".jpg",
         ".jpeg",
-        ".svg"
-      ]
+        ".svg",
+      ],
     },
 
     module: {
-      rules: [{
+      rules: [
+        {
           test: /\.ts(x?)$/,
           exclude: /node_modules/,
-          use: [{
-            loader: "ts-loader"
-          }]
+          use: [
+            {
+              loader: "ts-loader",
+            },
+          ],
         },
         {
           test: /favicon\.ico$/,
           loader: "file-loader",
           options: {
-            name: "[name].[ext]?[hash:8]"
-          }
+            name: "[name].[ext]?[hash:8]",
+          },
         },
         // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
         {
           enforce: "pre",
           test: /\.js$/,
-          loader: "source-map-loader"
+          loader: "source-map-loader",
         },
         {
           test: /\.css$/i,
-          use: ["style-loader", "css-loader"]
+          use: ["style-loader", "css-loader"],
         },
         {
           test: /\.(png|jp(e*)g|svg)$/,
-          use: [{
-            loader: 'url-loader',
-            options: {
-              limit: 8000, // Convert images < 8kb to base64 strings
-              name: 'img/[hash]-[name].[ext]'
-            }
-          }]
-        }
-      ]
+          use: [
+            {
+              loader: "url-loader",
+              options: {
+                limit: 8000, // Convert images < 8kb to base64 strings
+                name: "img/[hash]-[name].[ext]",
+              },
+            },
+          ],
+        },
+      ],
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: srcPathExtend("index.html")
-      })
-    ]
+        template: srcPathExtend("index.html"),
+      }),
+    ],
 
     // When importing a module whose path matches one of the following, just
     // assume a corresponding global variable exists and use that instead.
