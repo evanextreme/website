@@ -45,7 +45,7 @@
     "html-webpack-plugin": "^4.2.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.1.4",
-    "ts-loader": "^7.0.1",
+    "ts-loader": "^7.0.3",
     "typescript": "^3.8.3",
     "typings-for-css-modules-loader": "^1.7.0",
     "url-loader": "^4.1.0",
