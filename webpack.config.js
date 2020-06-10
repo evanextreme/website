@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
 
 const settings = {
   distPath: path.join(__dirname, "dist"),
@@ -14,6 +15,12 @@ module.exports = (env, options) => {
   return {
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
+
+    devServer: {
+      inline: true,
+      host: "0.0.0.0",
+      port: 8080,
+    },
 
     resolve: {
       // Add '.ts' and '.tsx' as resolvable extensions.
@@ -75,6 +82,10 @@ module.exports = (env, options) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: srcPathExtend("index.html"),
+      }),
+      new WebpackBuildNotifierPlugin({
+        title: "evanextreme/website",
+        logo: path.resolve("./src/logo.svg"),
       }),
     ],
 
