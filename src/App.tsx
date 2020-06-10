@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Navbar from "./components/navigation/navbar";
 import Container from "@material-ui/core/Container";
@@ -12,6 +12,7 @@ import { red, blue, lightBlue } from "@material-ui/core/colors";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import About from "./pages/about";
+import Pay from "./pages/pay";
 
 const App: React.FC = () => {
   const prefersDark = useMediaQuery("(prefers-color-scheme: dark)");
@@ -29,8 +30,8 @@ const App: React.FC = () => {
           // Used to shift a color's luminance by approximately
           // two indexes within its tonal palette.
           // E.g., shift from Red 500 to Red 300 or Red 700.
-          tonalOffset: 0.4
-        }
+          tonalOffset: 0.4,
+        },
       }),
     [prefersDark]
   );
@@ -46,7 +47,14 @@ const App: React.FC = () => {
             <Navbar></Navbar>
           </div>
           <Container maxWidth="sm">
-            <About></About>
+            <Switch>
+              <Route path="/pay">
+                <Pay></Pay>
+              </Route>
+              <Route path="/">
+                <About></About>
+              </Route>
+            </Switch>
           </Container>
         </div>
       </Router>
