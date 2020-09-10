@@ -8,7 +8,7 @@ const About: React.FC = () => {
     <div className="about-body">
       <div className="about-body-text">
         <h3>
-          My name is Evan Hirsh. I'm software engineer with years of experience
+          My name is Evan Hirsh. I'm a software engineer with years of experience
           in full stack / distributed systems, starting full time at Microsoft
           this summer.
         </h3>
