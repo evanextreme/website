@@ -8,4 +8,4 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 RUN npm install
 
-RUN npm run start
+RUN npm run dev
