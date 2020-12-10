@@ -1,6 +1,6 @@
 {
     "name": "ehirsh-website",
     "build": {
-        "dockerfile": "./Dockerfile"
+        "dockerfile": "./Dockerfile.dev"
     }
 }
