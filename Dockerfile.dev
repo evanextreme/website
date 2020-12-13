@@ -1,0 +1,11 @@
+FROM node:13-stretch as build
+
+WORKDIR /app
+
+COPY . /app
+
+ENV PATH /app/node_modules/.bin:$PATH
+
+RUN npm install
+
+RUN npm run dev
