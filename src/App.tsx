@@ -39,6 +39,9 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
+        <head>
+          <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1a06751c0793415aa7c6c82fe1226172"}'></script>
+        </head>
         <div
           className="App"
           style={{ backgroundColor: "palette.background.default" }}
