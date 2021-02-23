@@ -1,8 +1,6 @@
 import React from "react";
 import { AppBar, Button, Grid, Toolbar, IconButton } from "@material-ui/core";
-import { Link } from "react-router-dom";
-
-// import { Link } from "react-router-dom";
+import { HomePageLink, PayPageLink } from "./links";
 
 import {
   Email as EmailIcon,
@@ -12,22 +10,17 @@ import {
 
 import "./navbar.css";
 
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-export const PayLinkComponent = (props: any) => {
-  return <Link to="/pay" {...props}></Link>;
-};
-
 const Navbar: React.FC = () => {
   return (
     <div className="navbar">
       <AppBar position="sticky">
         <Toolbar>
-          <h1 className="navbar-logo-text"><a href="/">EHIRSH</a></h1>
+          <a className="navbar-logo-text" href="/">EHIRSH</a>
           <Grid container spacing={1} direction="row" justify="flex-end">
-            <Button disabled color="inherit">
+            <Button disabled color="inherit" href="https://world.hey.com/ehirsh">
               Blog
             </Button>
-            <Button color="inherit" component={PayLinkComponent}>
+            <Button color="inherit" component={PayPageLink}>
               Pay
             </Button>
             <IconButton href="mailto:evan@ehirsh.com" aria-label="Email">
