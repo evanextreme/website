@@ -1,4 +1,4 @@
-FROM node:13-stretch as build
+FROM node:13-stretch as prep
 
 WORKDIR /app
 
@@ -6,15 +6,17 @@ COPY . /app
 
 ENV PATH /app/node_modules/.bin:$PATH
 
-RUN npm install
+RUN ["npm", "install"]
 
-RUN npm run build
+FROM prep as build
+
+RUN ["npm", "run", "build"]
 
 FROM nginx:alpine
 
 COPY --from=build /app/dist /usr/share/nginx/html
 
-RUN rm /etc/nginx/conf.d/default.conf
+RUN ["rm", "/etc/nginx/conf.d/default.conf"]
 
 COPY nginx.conf /etc/nginx/conf.d
 
