@@ -22,8 +22,11 @@ const Navbar: React.FC = () => {
     <div className="navbar">
       <AppBar position="sticky">
         <Toolbar>
-          <h1 className="navbar-logo-text">EHIRSH</h1>
+          <h1 className="navbar-logo-text"><a href="/">EHIRSH</a></h1>
           <Grid container spacing={1} direction="row" justify="flex-end">
+            <Button disabled color="inherit">
+              Blog
+            </Button>
             <Button color="inherit" component={PayLinkComponent}>
               Pay
             </Button>
