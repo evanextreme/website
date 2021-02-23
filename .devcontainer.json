@@ -1,7 +1,8 @@
 {
     "name": "ehirsh-website",
     "build": {
-        "dockerfile": "./Dockerfile"
+        "dockerfile": "./Dockerfile",
+        "target": "prep"
     },
-    "runArgs": ["--target", "prep"]
+    
 }
