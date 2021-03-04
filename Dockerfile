@@ -1,4 +1,4 @@
-FROM node:13-stretch as prep
+FROM node:latest as prep
 
 WORKDIR /app
 
