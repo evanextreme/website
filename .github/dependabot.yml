@@ -15,3 +15,5 @@ updates:
   - dependency-name: css-loader
     versions:
     - 5.1.0
+  - depenency-name: "*"
+    update-types: ["version-update:semver-patch"]
