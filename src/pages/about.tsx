@@ -8,7 +8,7 @@ const About: React.FC = () => {
     <div className="about-body">
       <div className="about-body-text">
         <h3>
-          My name is Evan Hirsh. I'm a professional software engineer with years of experience building full stack and distributed systems relied on by hundreds of thousands of users across the world. Currently working on Azure Data Factory at Microsoft.
+          My name is Evan Hirsh. I'm a professional software engineer with years of experience building full stack and distributed systems relied on by hundreds of thousands of users across the world. Building Azure Data Factory / Synapse at Microsoft.
         </h3>
       </div>
       <Image
