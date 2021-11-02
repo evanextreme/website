@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
             <Button color="inherit" href="https://blog.ehirsh.com/">
               Blog
             </Button>
-            <Button color="inherit" component={PayPageLink}>
+            <Button disabled color="inherit" component={PayPageLink}>
               Pay
             </Button>
             <IconButton href="mailto:evan@ehirsh.com" aria-label="Email">
