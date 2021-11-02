@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
         <Toolbar>
           <a className="navbar-logo-text" href="/">EHIRSH</a>
           <Grid container spacing={1} direction="row" justify="flex-end">
-            <Button color="inherit" href="https://world.hey.com/ehirsh">
+            <Button color="inherit" href="https://blog.ehirsh.com/">
               Blog
             </Button>
             <Button color="inherit" component={PayPageLink}>
