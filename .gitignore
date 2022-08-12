@@ -19,3 +19,5 @@ __pycache__/
 # End of https://www.gitignore.io/api/visualstudiocode
 node_modules
 dist/*
+
+/.nova/Tasks/Node.js Debug.json

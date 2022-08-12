@@ -1,5 +1,12 @@
 import React from "react";
-import { AppBar, Button, Grid, Toolbar, IconButton } from "@material-ui/core";
+import {
+  AppBar,
+  Button,
+  Grid,
+  Link,
+  Toolbar,
+  IconButton,
+} from "@material-ui/core";
 import { HomePageLink, PayPageLink } from "./links";
 
 import {
@@ -15,7 +22,11 @@ const Navbar: React.FC = () => {
     <div className="navbar">
       <AppBar position="sticky">
         <Toolbar>
-          <a className="navbar-logo-text" href="/">EVAN HIRSH</a>
+          <Grid container spacing={1} direction="row" justify="flex-start">
+            <Link component={HomePageLink}>
+              <div className="navbar-logo-text">EVAN HIRSH</div>
+            </Link>
+          </Grid>
           <Grid container spacing={1} direction="row" justify="flex-end">
             <Button color="inherit" href="https://blog.ehirsh.com/">
               Blog
