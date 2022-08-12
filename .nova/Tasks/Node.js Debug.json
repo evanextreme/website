@@ -1,0 +1,14 @@
+{
+  "extension" : {
+    "identifier" : "panic.JavaScript",
+    "name" : "JavaScript"
+  },
+  "extensionTemplate" : "nodeDebug",
+  "extensionValues" : {
+    "launchArgs" : [
+      "run",
+      "start"
+    ],
+    "scriptPath" : "\/opt\/homebrew\/bin\/npm"
+  }
+}
