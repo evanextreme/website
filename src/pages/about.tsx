@@ -10,9 +10,9 @@ const About: React.FC = () => {
         <h3>
           Hey!! I'm a professional software engineer with years of experience
           creating full stack and distributed systems relied on by hundreds of
-          thousands of users across the world. I graduated from RIT with a
-          degree in computer science, and a minor in computer security. While
-          there I also created their{" "}
+          thousands of users across the world. I graduated from the{" "}
+          <a href="https://www.rit.edu">Rochester Institute of Technology</a>{" "}
+          with a bachelors in computer science. While there I also created their{" "}
           <a href="https://ritesports.org">esports program</a>. Right now I am
           making{" "}
           <a href="https://azure.microsoft.com/en-us/services/data-factory/">
@@ -22,13 +22,16 @@ const About: React.FC = () => {
           <a href="https://azure.microsoft.com/en-us/services/synapse-analytics/#overview">
             Synapse
           </a>{" "}
-          at Microsoft. Feel free to email / tweet at me, as I respond quickly!
-          Here's a photo of me walking through the woods
+          at Microsoft. Feel free to email / tweet at me using the buttons
+          above, as I respond quickly! Here's a photo of me walking through the
+          woods.
         </h3>
       </div>
       <Image
         onClick={() =>
-          console.log("Image clicked. Will do something with this later lmao")
+          alert(
+            "Thanks for clicking my image! I dont know why I havent changed this image."
+          )
         }
         src={evanImage}
         aspectRatio={8.5 / 11}
