@@ -13,6 +13,7 @@ import {
   Email as EmailIcon,
   GitHub as GitHubIcon,
   Twitter as TwitterIcon,
+  Forum as MastodonIcon,
 } from "@material-ui/icons";
 
 import "./navbar.css";
@@ -28,6 +29,7 @@ const Navbar: React.FC = () => {
             </Link>
           </Grid>
           <Grid container spacing={1} direction="row" justify="flex-end">
+            {/* <ProjectMenu /> */}
             <Button color="inherit" href="https://blog.ehirsh.com/">
               Blog
             </Button>
@@ -42,6 +44,12 @@ const Navbar: React.FC = () => {
               aria-label="Twitter"
             >
               <TwitterIcon />
+            </IconButton>
+            <IconButton
+              href="https://mastodon.social/@evanextreme"
+              aria-label="Mastodon"
+            >
+              <MastodonIcon />
             </IconButton>
             <IconButton
               href="https://www.github.com/evanextreme"
