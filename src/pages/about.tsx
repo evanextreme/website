@@ -22,7 +22,7 @@ const About: React.FC = () => {
           <a href="https://azure.microsoft.com/en-us/services/synapse-analytics/#overview">
             Synapse
           </a>{" "}
-          at Microsoft. Feel free to email / tweet at me using the buttons
+          at Microsoft. Feel free to contact me using the buttons
           above, as I respond quickly! Here's a photo of me walking through the
           woods.
         </h3>
