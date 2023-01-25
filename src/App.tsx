@@ -7,7 +7,6 @@ import Container from "@mui/material/Container";
 import { ThemeProvider } from "@mui/styles";
 
 import { createTheme } from "@mui/material";
-import { indigo, red } from "@mui/material/colors";
 import About from "./pages/about";
 import Pay from "./pages/pay";
 
