@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "material-ui-image";
+import Image from "mui-image";
 
 import evanImage from "../assets/img/woods.jpg";
 
@@ -22,19 +22,13 @@ const About: React.FC = () => {
           <a href="https://azure.microsoft.com/en-us/services/synapse-analytics/#overview">
             Synapse
           </a>{" "}
-          at Microsoft. Feel free to email / tweet at me using the buttons
+          at Microsoft. Feel free to contact me using the buttons
           above, as I respond quickly! Here's a photo of me walking through the
           woods.
         </h3>
       </div>
       <Image
-        onClick={() =>
-          alert(
-            "Thanks for clicking my image! I dont know why I havent changed this image."
-          )
-        }
         src={evanImage}
-        aspectRatio={8.5 / 11}
       />
     </div>
   );
