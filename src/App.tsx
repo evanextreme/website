@@ -6,17 +6,21 @@ import Container from "@mui/material/Container";
 
 import { ThemeProvider } from "@mui/styles";
 
-import useMediaQuery from "@mui/material/useMediaQuery";
-
-import mainTheme from "./style/theme"
+import { createTheme } from "@mui/material";
+import { indigo, red } from "@mui/material/colors";
 import About from "./pages/about";
 import Pay from "./pages/pay";
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  }
+});
+
 const App: React.FC = () => {
-  const prefersDark = useMediaQuery("(prefers-color-scheme: dark)");
 
   return (
-    <ThemeProvider theme={mainTheme}>
+    <ThemeProvider theme={darkTheme}>
       <Router>
         <head>
           <script
