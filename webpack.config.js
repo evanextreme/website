@@ -1,3 +1,5 @@
+const TerserPlugin = require('terser-webpack-plugin');
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
@@ -14,11 +16,21 @@ function srcPathExtend(subpath) {
 module.exports = (env, options) => {
   return {
     // Enable sourcemaps for debugging webpack's output.
+    mode: 'production',
+    optimization: {
+      minimizer: [new TerserPlugin({ /* additional options here */ })],
+    },
     devtool: "source-map",
 
     devServer: {
       host: "0.0.0.0",
       port: 8080,
+    },
+
+    performance: {
+      hints: false,
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000
     },
 
     resolve: {
