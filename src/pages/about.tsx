@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "material-ui-image";
+import Image from "mui-image";
 
 import evanImage from "../assets/img/woods.jpg";
 
@@ -28,13 +28,7 @@ const About: React.FC = () => {
         </h3>
       </div>
       <Image
-        onClick={() =>
-          alert(
-            "Thanks for clicking my image! I dont know why I havent changed this image."
-          )
-        }
         src={evanImage}
-        aspectRatio={8.5 / 11}
       />
     </div>
   );
