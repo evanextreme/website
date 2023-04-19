@@ -12,7 +12,8 @@ import { HomePageLink, PayPageLink } from "./links";
 import {
   Email as EmailIcon,
   GitHub as GitHubIcon,
-  Twitter as TwitterIcon,
+  // Twitter as TwitterIcon,
+  Cloud as BlueSkyIcon
 } from "@mui/icons-material";
 
 import SvgIcon from "@mui/material/SvgIcon"
@@ -42,10 +43,10 @@ const Navbar: React.FC = () => {
               <EmailIcon />
             </IconButton>
             <IconButton
-              href="https://www.twitter.com/evanextreme"
-              aria-label="Twitter"
+              href="https://staging.bsky.app/profile/evan.exposed"
+              aria-label="BlueSky"
             >
-              <TwitterIcon />
+              <BlueSkyIcon />
             </IconButton>
             <IconButton
               href="https://mastodon.sdf.org/@evan"
